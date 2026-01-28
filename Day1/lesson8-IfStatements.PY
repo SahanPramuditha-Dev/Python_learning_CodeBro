@@ -7,7 +7,9 @@ else:
     print("You are not eligible to vote yet.")
 
 """
-age = int(input("Enter your age: "))
+
+
+"""age = int(input("Enter your age: "))
 
 if age >= 110:
     print("You are a Supercentenarian")
@@ -33,5 +35,18 @@ elif age >= 1:
     print("You are a Toddler")
 else:
     print("You are a Baby / Infant")
+"""
 
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+if name =="":
+    print("Please enter your name")
+else:
+    print(f"Hello, {name}! ")
+
+if age =="":
+    print("Please enter your age")
+else:
+    print(f"You are {age} years old.")
 
