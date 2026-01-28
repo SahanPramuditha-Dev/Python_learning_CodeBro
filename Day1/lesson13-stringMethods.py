@@ -1,9 +1,9 @@
 name = "sahAn praMudItha"
-phone_Number = "076-4158780"
+phone_Number = "076-4156780"
 
 #get character Count
-count = len(name)
-print(f"Character Count :{count}") #Space is also count as a character
+length = len(name)
+print(f"Character Count :{length}") #Space is also count as a character
 #Output :- Character Count : 16
 
 #Gives the number of first occurance of the given character
@@ -71,3 +71,10 @@ print(f"To check Weather it is Identifier : {isidentifier}")
 
 count_ = phone_Number.count("-")
 print(f"Count the Number of '-' : {count_}")
+
+count_2 = phone_Number.count("6")
+print(f"Count the Number of '6' : {count_2}")
+
+phone_Number = phone_Number.replace("-"," ") 
+print("Phone number after replacing '-' with ' ': ",phone_Number)
+#this will replace - with a space 
