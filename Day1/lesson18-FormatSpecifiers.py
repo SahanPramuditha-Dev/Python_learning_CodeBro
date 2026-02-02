@@ -30,3 +30,4 @@ print("\n-------------------\n")
 print(f"Price 4 is ${price4:,}") # , is thousand separator
 print(f"Price 2 is ${price2:,.4f}") # we can do combinations too
 print(f"Price 3 is ${price3:+}")
+

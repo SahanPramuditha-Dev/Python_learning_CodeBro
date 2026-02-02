@@ -78,3 +78,4 @@ print(f"Count the Number of '6' : {count_2}")
 phone_Number = phone_Number.replace("-"," ") 
 print("Phone number after replacing '-' with ' ': ",phone_Number)
 #this will replace - with a space 
+
