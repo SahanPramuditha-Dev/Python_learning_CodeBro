@@ -61,4 +61,33 @@ print("\n-----------------------------\n")
 for key,value in capitals.items():
     print(f"{key} : {value}")
 
+print("\n-----------------------------\n")
+
+
+people = {
+    "p001": {"name": "Sahan", "age": 21},
+    "p002": {"name": "Kamal", "age": 30},
+    "p003": {"name": "Nimal", "age": 25}
+}
+
+print(people["p002"]["age"])  # Output: 30
+
+print("\n-----------------------------\n")
+
+for person_id, details in people.items():
+    print(f"{person_id} => Name: {details['name']}, Age: {details['age']}")
+
+print("\n-----------------------------\n")
+
+
+people = [
+    {"name": "Sahan", "age": 21},
+    {"name": "Kamal", "age": 30},
+    {"name": "Nimal", "age": 25}
+]
+
+for person in people:
+    print(person["name"], person["age"])
+
+print("\n-----------------------------\n")
 
