@@ -1,7 +1,7 @@
 import time
 
 def time_counter(end,start=0):
-    for i in range(start,end+1):
+    for i in range(start,end+1): # range(0, 5) produces: 0, 1, 2, 3, 4  // range(0, 5 + 1) produces: 0, 1, 2, 3, 4, 5
         print(i)
         time.sleep(1)
     print("Time's up!")

@@ -15,11 +15,43 @@ print(result)  # Output: 4.0
 from math import sqrt
 from math import pi
 from math import sqrt as s
+from math import e
 
+result = sqrt(25)
+print(result)  # Output: 5.0
 
-result = sqrt(16)
+result = s(16)
 print(result)  # Output: 4.0
 
 circumference = 2 * pi * 5
 print(circumference)  # Output: 31.41592653589793
+
+
+result = e ** 2
+print(result)  # Output: 7.38905609893065
+
+# or you can import the module and then import specific functions from it:
+import math
+
+print(math.sqrt(16))  # Output: 4.0
+print(math.pi)       # Output: 3.141592653589793
+
+
+a, b, c, d = 1, 2, 3, 4
+print(a, b, c, d)  # Output: 1 2 3 4
+
+"""
+in above a = 1, b = 2, c = 3, d = 4 is an example of unpacking, where we assign values to multiple variables in a single line. This is a convenient way to initialize multiple variables at once, and it can make your code more concise and readable.
+
+number of variables on the left side of the assignment operator (=) must match the number of values on the right side. If they do not match, Python will raise a ValueError. For example, if you try to unpack three values into two variables like this:
+
+a, b = 1, 2, 3 # This will raise a ValueError: too many values to unpack (expected 2)
+
+"""
+
+
+
+
+
+
 

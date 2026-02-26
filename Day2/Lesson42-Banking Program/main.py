@@ -4,7 +4,7 @@ is_running = True
 
 
 def show_balance():
-    print(f"Your current balance is: {balance}")
+    print(f"Your current balance is: LKR {balance:.2f}")
 
 
 def deposit():

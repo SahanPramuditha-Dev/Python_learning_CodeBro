@@ -2,7 +2,7 @@ def favourite_food(food):
     print(f"Your favourite food is {food} ")
 
 def main():
-    print("This is the main function of script1.")
+    print("This is the main function of script1.py.")
     favourite_food("Pizza")
     print("End of the main function.")
 

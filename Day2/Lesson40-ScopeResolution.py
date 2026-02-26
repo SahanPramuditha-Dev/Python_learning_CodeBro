@@ -49,8 +49,17 @@ e= 3
 print(e)  # Output: 3
 function()  # Output: 2.718281828459045
 
+# variable scope precedence order
+# When you reference a variable in your code, Python looks for it in the following order:
+# 1. Local scope: Python first looks for the variable in the local scope of the current function or block of code.
+# 2. Enclosing scope: If the variable is not found in the local scope,
+#    Python looks for it in the enclosing scope of any outer functions.
+# 3. Global scope: If the variable is not found in the local or enclosing scopes
+#    Python looks for it in the global scope of the module.
+# 4. Built-in scope: If the variable is not found in the local, enclosing, or global scopes,
+#    Python looks for it in the built-in scope of Python.
 
-
+# LEGB - Local-> Enclosing-> Global-> Built-in
 
 
 

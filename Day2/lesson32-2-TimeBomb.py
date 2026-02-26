@@ -1,6 +1,5 @@
 import time # We need to import the time module to use the sleep function, which allows us to create a delay between each print statement in the countdown.
-import pygame # We need to import the pygame module to play the explosion sound effect when the countdown reaches zero. Pygame is a popular library for creating games and multimedia applications in Python, and it provides functionality for handling audio playback.
-                # Install pygame using pip if you haven't already: pip install pygame
+
 """
 def time_counter(start,end=0):
     for i in range(start,end-1): 
@@ -15,26 +14,13 @@ time_counter(5,0)
 """
 
 
-
 def time_counter(start,end=0):
     for i in range(start,end-1,-1): # We use 'end - 1' because range is exclusive of the stop value.
                                     #normmally range function counts forward, but by providing a negative step (-1), we can make it count backwards.
                                     # The '-1' step tells Python to decrement the value of 'i' by 1 in each iteration, allowing us to count downwards from 'start' to 'end'.
         print(i)
         time.sleep(1)
-    pygame.mixer.init()
-    pygame.mixer.music.load("Day2/Blast.wav")
-    pygame.mixer.music.play()
     print("Kaboom 💥💣💥!")
-
-    # Keep program alive until sound finishes
-    while pygame.mixer.music.get_busy():
-        time.sleep(0.1)
-
-
-    print("Kaboom 💥💣💥!")
-
-
 
 start = int(input("Enter Timer for Countdown: "))
 password = input("Enter password for Confirmation: ")

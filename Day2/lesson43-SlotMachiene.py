@@ -13,7 +13,7 @@ JACKPOT_START = 500
 balance = 200
 jackpot = JACKPOT_START
 history = []
-
+ 
 
 def spin():
     """Return 3 random slot symbols"""
