@@ -4,10 +4,30 @@ import random
 # CONSTANT DATA
 # --------------------------------------------------
 
-WORDS = (
-    "apple", "orange", "banana", "grape",
-    "peach", "mango", "strawberry", "watermelon"
-)
+WORD_HINTS = {
+    "apple": "A crunchy red or green fruit.",
+    "alone": "By yourself; without others.",
+    "bread": "Food used to make a sandwich.",
+    "beach": "A sandy place by the ocean.",
+    "chair": "Something you sit on.",
+    "cloud": "A white fluffy thing in the sky.",
+    "dream": "Stories you see while sleeping.",
+    "drink": "To swallow a liquid like water.",
+    "earth": "The planet we live on.",
+    "eagle": "A large bird with sharp eyes.",
+    "floor": "What you walk on inside a house.",
+    "fruit": "Sweet food like grapes or berries.",
+    "glass": "What windows are made of.",
+    "green": "The color of grass or leaves.",
+    "heart": "It pumps blood through your body.",
+    "house": "A building where people live.",
+    "lemon": "A sour yellow citrus fruit.",
+    "light": "What you turn on when it's dark.",
+    "music": "Sounds you listen to for fun.",
+    "mouse": "A tiny animal that likes cheese.",
+}
+
+WORDS = tuple(WORD_HINTS.keys())
 
 HANGMAN_ART = {
     0: r"""
@@ -83,6 +103,12 @@ def get_random_word():
     return random.choice(WORDS)
 
 # --------------------------------------------------
+# FUNCTION: build a hint for the secret word
+# --------------------------------------------------
+def get_hint(secret_word):
+    return WORD_HINTS[secret_word]
+
+# --------------------------------------------------
 # FUNCTION: display hangman + word progress
 # --------------------------------------------------
 def display_game_state(secret_word, guessed_letters, wrong_guesses):
@@ -104,12 +130,12 @@ def display_game_state(secret_word, guessed_letters, wrong_guesses):
 def get_player_guess(guessed_letters):
     guess = input("\nEnter a letter: ").lower()
 
-    if len(guess) != 1 or not guess.isalpha(): # 
-        print("❌ Invalid input. Enter ONE letter only.")
+    if len(guess) != 1 or not guess.isalpha():
+        print("Invalid input. Enter ONE letter only.")
         return None
 
     if guess in guessed_letters:
-        print("⚠ Letter already guessed.")
+        print("Letter already guessed.")
         return None
 
     return guess
@@ -128,18 +154,20 @@ def play_hangman():
     guessed_letters = set()
     wrong_guesses = 0
 
+    print("Hint:", get_hint(secret_word))
+
     while True:
         display_game_state(secret_word, guessed_letters, wrong_guesses)
 
         # Win condition
         if has_won(secret_word, guessed_letters):
-            print("\n🎉 You WIN!")
+            print("\nYou WIN!")
             print("The word was:", secret_word)
             break
 
         # Lose condition
         if wrong_guesses >= MAX_WRONG:
-            print("\n💀 You LOSE!")
+            print("\nYou LOSE!")
             print("The word was:", secret_word)
             break
 
@@ -152,9 +180,9 @@ def play_hangman():
 
         if guess not in secret_word:
             wrong_guesses += 1
-            print("❌ Wrong guess!")
+            print("Wrong guess!")
         else:
-            print("✅ Correct guess!")
+            print("Correct guess!")
 
 # --------------------------------------------------
 # PROGRAM ENTRY POINT
