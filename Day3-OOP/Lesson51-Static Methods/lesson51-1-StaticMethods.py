@@ -11,7 +11,6 @@ class Employee:
         return f"{self.name} = {self.position}"
     
     @staticmethod
-
     def is_valid_position(position):
         valid_postion = ["Manager","Cashier","Cook","Janitor"]
         return postion in valid_postion
